@@ -20,6 +20,8 @@ phases:
 artifacts:
   files:
   - '**/*'
+  - scripts/*.sh
+    - appspec.yml
   name: scenery_app
       
       
