@@ -6,21 +6,20 @@ phases:
       nodejs: latest
   pre_build:
     commands:
-      - echo pre-build phase
+      - echo "Pre-build phase"
   build:
     commands:
-      - echo build phase
+      - echo "Build phase"
       - npm install
+      # - npm run build  # Uncomment if needed
   post_build:
     commands:
-      - echo post-build phase
-      - echo Build completed on `date`
-      - echo Artifacts copied to S3
-      
+      - echo "Post-build phase"
+      - echo "Build completed on $(date)"
+      - echo "Artifacts copied to S3"
+
 artifacts:
   files:
-  - '**/*'
+    - '**/*'
   name: scenery_app
-      
-      
       
